@@ -1,3 +1,15 @@
+# BLiP 
+
+This repository is a fork which applies BLiP (Bayesian Linear Programming), a Bayesian method for resolution-adaptive signal detection, on top of StarNet, a tool for detecting sources in astronomical images using Bayesian variational inference. 
+
+This repository is nearly identical to the original repository, with a few exceptions that allow us to wrap BLiP on top of Starnet. The main exceptions are:
+
+1. The blip_wrapper/ directory contains a few helper functions  
+2. In experiments_elbo_vs_sleep/jupyter, the "BLiP-simulations.ipynb" evaluates the performance of BLiP + Starnet in simulations. 
+3. In experiments_m2/jupyter/, the "BLiP-wrapper.ipynb" file applies BLiP + Starnet to 
+4. All final data and plots are saved to the blip_data/ directory, and the plotting functions are in that directory as well.
+
+
 # Variational Inference for Deblending Crowded Starfields
 
 This Github repository implements *StarNet*, a probabilistic deblender employing variational Bayesian inference and deep learning. 
