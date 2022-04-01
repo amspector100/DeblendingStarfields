@@ -1,14 +1,27 @@
-# BLiP 
+# Bayesian Linear Programming (BLiP) for Point Source Detection
 
-This repository is a fork which applies BLiP (Bayesian Linear Programming), a Bayesian method for resolution-adaptive signal detection, on top of StarNet, a tool for detecting sources in astronomical images using Bayesian variational inference. 
+This repository contains the code used in [Janson and Spector (2022)](https://arxiv.org/abs/2203.17208) to apply BLiP to detect point sources in Messier 2 image data. In particular, BLiP applies directly on top of a pretrained StarNet model from the original ``DeblendingStarfields`` repository, so this repository is a fork of the ``DeblendingStarfields`` repository.
 
-This repository is nearly identical to the original repository, with a few exceptions that allow us to wrap BLiP on top of Starnet. The main exceptions are:
+## Prerequesites
 
-1. The blip_wrapper/ directory contains a few helper functions  
-2. In experiments_elbo_vs_sleep/jupyter, the "BLiP-simulations.ipynb" evaluates the performance of BLiP + Starnet in simulations. 
-3. In experiments_m2/jupyter/, the "BLiP-wrapper.ipynb" file applies BLiP + Starnet to 
-4. All final data and plots are saved to the blip_data/ directory, and the plotting functions are in that directory as well.
+1. Install [pyblip](https://github.com/amspector100/pyblip).
+2. Install the prerequsites for the original ``StarNet`` analysis, namely ``pytorch``.
 
+## Replicating the analysis
+
+The relevant code for applying BLiP is located in the following places:
+
+
+1. ``experiments_m2/jupyter/BLiP_M2_wrapper.ipynb`` contains the code we used to run BLiP on top of the pretrained StarNet models.
+
+2. ``blip_wrapper/`` contains the following:
+	1. First, it contains cached outputs from BLiP in two .csv and two .json files. 
+	2. Second, ``blip_wrapper/Starnet_BLiP_plots.ipynb`` will generate the plots in the paper. 
+	3. Lastly, ``blip_wrapper/performance_eval.py`` contains utility functions for calculating the resolution-adjusted power and FDR of various detection methods.
+
+There should be no other changes to the original repository---if so, any additional changes were inadvertent.
+
+Below this line is the README from the original ``DeblendingStarfields`` repository.
 
 # Variational Inference for Deblending Crowded Starfields
 
