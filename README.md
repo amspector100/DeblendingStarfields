@@ -1,10 +1,10 @@
 # Bayesian Linear Programming (BLiP) for Point Source Detection
 
-This repository contains the code used in [Janson and Spector (2022)](https://arxiv.org/abs/2203.17208) to apply BLiP to detect point sources in Messier 2 image data. In particular, BLiP applies directly on top of a pretrained StarNet model from the original ``DeblendingStarfields`` repository, so this repository is a fork of the ``DeblendingStarfields`` repository.
+This repository contains the code used in the paper "Controlled Discovery and Localization of Signals via Bayesian Linear Programming" to apply BLiP to detect point sources in Messier 2 image data. In particular, BLiP applies directly on top of a pretrained StarNet model from the original ``DeblendingStarfields`` repository, so this repository is a fork of the ``DeblendingStarfields`` repository.
 
 ## Prerequesites
 
-1. Install [pyblip](https://github.com/amspector100/pyblip).
+1. Install pyblip by running ``python3.9 -m pip install -U pyblip``.
 2. Install the prerequsites for the original ``StarNet`` analysis, namely ``pytorch``.
 
 ## Replicating the analysis
